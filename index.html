@@ -23,11 +23,11 @@
             </form>
         </div>
         <div class="displayNone" id="usuarioGuardado"><!-- clase original: "usuario_guardado" -->
-
             <p>Bienvenido <span>Usuario</span>!</p>
+            <a href="" class="carrito"><img src="./asets/icons/pngwing.com.png" alt="carrito de compras"></a>
             <button id="btnNoSoyUsuario" class="boton">No soy <span>Usuario</span></button>
         </div>
-        <div class="mascota"><!--clase original: "mascota"-->
+        <div class="mascota displayNone"><!--clase original: "mascota"-->
             <p>Ingresá los datos de tu mascota</p>
             <form id="formDatosMascota">
                 <input type="text" id="nombreMascota" placeholder="Nombre">
@@ -42,6 +42,20 @@
                 </select>
                 <button class="boton" id="btnCargarMascota">Listo!</button>
             </form>
+        </div>
+        <div>
+            <div class="mascota_guardada" id="mascotaGuardada">
+                <ul>
+                    <li class="mascotaGuardada_nombre">Nombre</li>
+                    <li class="mascotaGuardada_especie">Especie</li>
+                    <li class="mascotaGuardada_sexo">Sexo</li>
+                    <li class="mascotaGuardada_edad">Edad</li>
+                </ul>
+            </div>
+            <div class="lista_productos" id="listaProductos">
+
+            </div>
+
         </div>
 
     </main>
