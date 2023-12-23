@@ -1,0 +1,16 @@
+input[type="text"] {
+    padding: 5px;
+    border: none;
+    background: #1090c331;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    background: #fff;
+    border-bottom: 4px solid $color-interaccion1;
+}
+
+input[type="text"]:not(:placeholder-shown) {
+    outline: none;
+    border-bottom: 4px solid $color-interaccion1;
+}

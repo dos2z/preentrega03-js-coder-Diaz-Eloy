@@ -1,0 +1,12 @@
+.boton {
+    display: inline;
+    padding: 10px;
+    border: 2px outset $color-interaccion1;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.boton:active {
+    border: 2px inset $color-interaccion1;
+    background: #f3f7f8;
+}

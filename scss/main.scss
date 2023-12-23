@@ -1,0 +1,52 @@
+@import "./base/reset";
+@import "./base/colores";
+
+@import "./components/mixins";
+@import "./components/buttons";
+@import "./components/header-body-footer";
+@import "./components/inputs";
+@import "./components/estiloseteable";
+
+/*Tarjeta nuevo usuario*/
+
+.nuevo_usuario {
+    @include tarjetas;
+    // display: none;
+    background: #fff;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+       
+    }
+}
+
+.usuario_guardado {
+    padding: 30px;
+    p {
+        font-size: 2em;
+        border-bottom: 2px solid $color-interaccion1;
+        margin-bottom: 30px;
+    }
+}
+
+.mascota {
+    background: #fff;
+    width: 20%;
+    min-width: 250px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    p{
+        font-size: 1.2em;
+        margin: 10px;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+}

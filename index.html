@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <script src="./scripts/script.js" defer></script> -->
+    <script src="./scripts/cargaDatos.js" defer></script>
+    <title>Pre entrega 3</title>
+</head>
+
+<body>
+    <header>
+        <h1>La Mascotienda</h1>
+    </header>
+    <main>
+        <div class="displayNone" id="nuevoUsuario"><!--clase original: "nuevo_usuario"-->
+            <form id="formNuevoUsuario">
+                <label for="nombreUsuario">Hola! por favor ingresá tu nombre:</label><input type="text"
+                    id="nombreUsuario" placeholder="Nombre">
+                <button id="btnCargaUsuario" class="boton">Listo!</button>
+            </form>
+        </div>
+        <div class="displayNone" id="usuarioGuardado"><!-- clase original: "usuario_guardado" -->
+
+            <p>Bienvenido <span>Usuario</span>!</p>
+            <button id="btnNoSoyUsuario" class="boton">No soy <span>Usuario</span></button>
+        </div>
+        <div class="mascota"><!--clase original: "mascota"-->
+            <p>Ingresá los datos de tu mascota</p>
+            <form id="formDatosMascota">
+                <input type="text" id="nombreMascota" placeholder="Nombre">
+                <label for="hembra"><input type="radio" id="hembra" name="sexoMascota">Hembra</label>
+                <label for="macho"><input type="radio" id="macho" name="sexoMascota">Macho</label>
+                <input type="number" id="edadMascota" placeholder="Edad" max="90" min="0">
+                <select name="especies" id="especieMascota" placeholder="Especie">
+                    <option value="Gato">Gato</option>
+                    <option value="Perro">Perro</option>
+                    <option value="Hamster">Hamster</option>
+                    <option value="Otro">Otro</option>
+                </select>
+                <button class="boton" id="btnCargarMascota">Listo!</button>
+            </form>
+        </div>
+
+    </main>
+    <footer>
+
+    </footer>
+
+
+</body>
+
+</html>

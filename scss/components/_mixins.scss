@@ -1,0 +1,13 @@
+@mixin tarjetas {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 50px;
+    width: 30%;
+    min-width: 300px;
+    border: 3px outset #1090c3;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+}
