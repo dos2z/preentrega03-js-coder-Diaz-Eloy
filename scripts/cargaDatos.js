@@ -39,6 +39,9 @@ function tuMascota(mascota){
     mascotaGuardada.querySelector(".mascotaGuardada_especie").textContent = mascota.especie;
     mascotaGuardada.querySelector(".mascotaGuardada_sexo").textContent = mascota.sexo;
     mascotaGuardada.querySelector(".mascotaGuardada_edad").textContent = mascota.edad;
+    let rutaImg = `./asets/img/cardMascotaGuardada/${mascota.especie}.jpg`;
+    mascotaGuardada.querySelector("#imgMascotaGuardada").setAttribute("src", rutaImg);
+    console.log(rutaImg);
 }
 
 //--Funcion que lee los datos de la mascota

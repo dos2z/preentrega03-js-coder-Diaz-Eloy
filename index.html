@@ -33,29 +33,128 @@
                 <input type="text" id="nombreMascota" placeholder="Nombre">
                 <label for="hembra"><input type="radio" id="hembra" name="sexoMascota">Hembra</label>
                 <label for="macho"><input type="radio" id="macho" name="sexoMascota">Macho</label>
-                <input type="number" id="edadMascota" placeholder="Edad" max="90" min="0">
+                <input type="number" id="edadMascota" placeholder="Edad" max="90" min="0" step="1">
+                <label for="especieMascota">Especie:</label>
                 <select name="especies" id="especieMascota" placeholder="Especie">
                     <option value="Gato">Gato</option>
                     <option value="Perro">Perro</option>
-                    <option value="Hamster">Hamster</option>
-                    <option value="Otro">Otro</option>
+                    <!-- <option value="Hamster">Hamster</option> -->
+                    <option value="Otro" selected>Otro</option>
                 </select>
                 <button class="boton" id="btnCargarMascota">Listo!</button>
             </form>
         </div>
         <div>
             <div class="displayNone" id="mascotaGuardada"><!--clase visible: "mascota_guardada"-->
-                <ul>
-                    <li class="mascotaGuardada_nombre">Nombre</li>
-                    <li class="mascotaGuardada_especie">Especie</li>
-                    <li class="mascotaGuardada_sexo">Sexo</li>
-                    <li class="mascotaGuardada_edad">Edad</li>
-                </ul>
+                <div>
+                    <ul>
+                        <li class="mascotaGuardada_nombre">Nombre</li>
+                        <li class="mascotaGuardada_especie">Especie</li>
+                        <li class="mascotaGuardada_sexo">Sexo</li>
+                        <li>Edad (años): <span class="mascotaGuardada_edad">Edad</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <img id="imgMascotaGuardada" src="./asets/img/cardMascotaGuardada/Gato.jpg"
+                        alt="imagen mascota ficticia">
+                </div>
             </div>
-            <div class="lista_productos" id="listaProductos">
+        </div>
+        <div class="productos" id="productos">
+            <div class="productos_gato" id="productosGato">
+                <h2>Gatos</h2>
+                <h3>Alimentos para gato</h3>
+                <div class="items">
+                    <div class="gato__alimento1 producto">
+                        <img src="./asets/img/comida_gatos/Sieger-Katze-Kitten-1.png" alt="">
+                        <h3>
+                            Kitten
+                        </h3>
+                        <div class="producto__descripcion">
+                            <p>Alimento para gatos cachorros, hasta 1 año</p>
+                        </div>
+                        <div class="precio">Precio:
+                            $<span>14.580</span>
+                        </div>
+                        <a href="" class="agregar_carrito">Agregar al carrito</a>
+                    </div>
+                    <div class="gato__alimento1 producto">
+                        <img src="./asets/img/comida_gatos/Sieger-Katze-Adult-1.png" alt="">
+                        <h3>
+                            Adulto
+                        </h3>
+                        <div class="producto__descripcion">
+                            <p>Alimento para gatos adultos, a partir de los 12 meses</p>
+                        </div>
+                        <div class="precio">Precio:
+                            $<span>13.710</span>
+                        </div>
+                        <a href="" class="agregar_carrito">Agregar al carrito</a>
+                    </div>
+                    <div class="gato__alimento1 producto">
+                        <img src="./asets/img/comida_gatos/Sieger-Katze-Senior-1.png" alt="">
+                        <h3>
+                            Senior
+                        </h3>
+                        <div class="producto__descripcion">
+                            <p>Alimento para gatos mayores a 7 años</p>
+                        </div>
+                        <div class="precio">Precio:
+                            $<span>15.470</span>
+                        </div>
+                        <a href="" class="agregar_carrito">Agregar al carrito</a>
+                    </div>
+
+                </div>
+
+
+                <h3>Arena para Gatos</h3>
+                <div class="items">
+                    <div class="gato__alimento1 producto">
+                        <img src="./asets/img/piedras-gatos/piedras-absorsol.png" alt="">
+                        <h3>
+                            Absorsol
+                        </h3>
+                        <div class="producto__descripcion">
+                            <p>Piedritas sanitarias tradicionales, paquete de 12kg</p>
+                        </div>
+                        <div class="precio">Precio:
+                            $<span>7.580</span>
+                        </div>
+                        <a href="" class="agregar_carrito">Agregar al carrito</a>
+                    </div>
+                    <div class="gato__alimento1 producto">
+                        <img src="./asets/img/piedras-gatos/piedras-stonecat.png" alt="">
+                        <h3>
+                            StoneCat
+                        </h3>
+                        <div class="producto__descripcion">
+                            <p>Arena sanitaria aglutinante, paquete de 4kg</p>
+                        </div>
+                        <div class="precio">Precio:
+                            $<span>6.310</span>
+                        </div>
+                        <a href="" class="agregar_carrito">Agregar al carrito</a>
+                    </div>
+                    <div class="gato__alimento1 producto">
+                        <img src="./asets/img/piedras-gatos/piedras-cancat.png" alt="">
+                        <h3>
+                            CanCat
+                        </h3>
+                        <div class="producto__descripcion">
+                            <p>Piedritas sanitarias silica Gel, paquete de 3kg</p>
+                        </div>
+                        <div class="precio">Precio:
+                            $<span>9.570</span>
+                        </div>
+                        <a href="" class="agregar_carrito">Agregar al carrito</a>
+                    </div>
+                </div>
 
             </div>
+            <div class="productos_perro" id="productosPerro">
 
+            </div>
         </div>
 
     </main>
