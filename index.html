@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <!-- <script src="./scripts/script.js" defer></script> -->
     <script src="./scripts/cargaDatos.js" defer></script>
+    <script src="./scripts/carrito.js" defer></script>
     <title>Pre entrega 3</title>
 </head>
 
@@ -15,6 +16,7 @@
         <h1>La Mascotienda</h1>
     </header>
     <main>
+        <!-- cargar nombre de usuario -->
         <div class="displayNone" id="nuevoUsuario"><!--clase original: "nuevo_usuario"-->
             <form id="formNuevoUsuario">
                 <label for="nombreUsuario">Hola! por favor ingresá tu nombre:</label><input type="text"
@@ -22,11 +24,27 @@
                 <button id="btnCargaUsuario" class="boton">Listo!</button>
             </form>
         </div>
+        <!-- Mensaje de bienvenida y datos de usuario guardado-->
         <div class="displayNone" id="usuarioGuardado"><!-- clase original: "usuario_guardado" -->
-            <p>Bienvenido <span>Usuario</span>!</p>
-            <a href="" class="carrito"><img src="./asets/icons/pngwing.com.png" alt="carrito de compras"></a>
+            <p class="usuario_guardado_p">Bienvenido <span>Usuario</span>!</p>
+            <!--carrito-->
+            <a href="" class="btncarrito"><img src="./asets/icons/pngwing.com.png" alt="carrito de compras"></a>
+            <div class="carrito">
+                <p class="encabezado">Carrito</p>
+                <div class="carritoProductos">
+                    <div class="productoCarrito">
+                        <p>Nada en el carrito</p>
+                        <!-- <p class="producotCarritoNombre">Nombre</p><p class="producotCarritoPrecio">Precio</p><p class="producotCarritoCantidad">Cantidad</p> Es la estructura de los productos que se agregan al carrito-->
+                    </div>
+                </div>
+                <div id="totalCarrito">
+                    <p>Total: $ <span>0,00</span></p>
+                </div>
+            </div>
+            <!--Botón para borrar los datos-->
             <button id="btnNoSoyUsuario" class="boton">No soy <span>Usuario</span></button>
         </div>
+        <!-- cargar datos de una mascota-->
         <div class="mascota displayNone"><!--clase original: "mascota"-->
             <p>Ingresá los datos de tu mascota</p>
             <form id="formDatosMascota">
@@ -67,9 +85,7 @@
                 <div class="items">
                     <div class="gato__alimento1 producto">
                         <img src="./asets/img/comida_gatos/Sieger-Katze-Kitten-1.png" alt="">
-                        <h3>
-                            Kitten
-                        </h3>
+                        <h3 class="nombreProducto">Sieger Gatos Kitten</h3>
                         <div class="producto__descripcion">
                             <p>Alimento para gatos cachorros, hasta 1 año</p>
                         </div>
@@ -80,9 +96,7 @@
                     </div>
                     <div class="gato__alimento1 producto">
                         <img src="./asets/img/comida_gatos/Sieger-Katze-Adult-1.png" alt="">
-                        <h3>
-                            Adulto
-                        </h3>
+                        <h3 class="nombreProducto">Sieger Gatos Adulto</h3>
                         <div class="producto__descripcion">
                             <p>Alimento para gatos adultos, a partir de los 12 meses</p>
                         </div>
@@ -93,9 +107,7 @@
                     </div>
                     <div class="gato__alimento1 producto">
                         <img src="./asets/img/comida_gatos/Sieger-Katze-Senior-1.png" alt="">
-                        <h3>
-                            Senior
-                        </h3>
+                        <h3 class="nombreProducto">Sieger Gatos Senior</h3>
                         <div class="producto__descripcion">
                             <p>Alimento para gatos mayores a 7 años</p>
                         </div>
@@ -112,9 +124,7 @@
                 <div class="items">
                     <div class="gato__alimento1 producto">
                         <img src="./asets/img/piedras-gatos/piedras-absorsol.png" alt="">
-                        <h3>
-                            Absorsol
-                        </h3>
+                        <h3 class="nombreProducto">Absorsol</h3>
                         <div class="producto__descripcion">
                             <p>Piedritas sanitarias tradicionales, paquete de 12kg</p>
                         </div>
@@ -125,9 +135,7 @@
                     </div>
                     <div class="gato__alimento1 producto">
                         <img src="./asets/img/piedras-gatos/piedras-stonecat.png" alt="">
-                        <h3>
-                            StoneCat
-                        </h3>
+                        <h3 class="nombreProducto">StoneCat</h3>
                         <div class="producto__descripcion">
                             <p>Arena sanitaria aglutinante, paquete de 4kg</p>
                         </div>
@@ -138,9 +146,7 @@
                     </div>
                     <div class="gato__alimento1 producto">
                         <img src="./asets/img/piedras-gatos/piedras-cancat.png" alt="">
-                        <h3>
-                            CanCat
-                        </h3>
+                        <h3 class="nombreProducto">CanCat</h3>
                         <div class="producto__descripcion">
                             <p>Piedritas sanitarias silica Gel, paquete de 3kg</p>
                         </div>

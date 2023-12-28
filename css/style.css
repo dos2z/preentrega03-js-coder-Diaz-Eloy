@@ -27,7 +27,7 @@ body header {
   top: 0;
   height: 70px;
   padding: 20px;
-  background-color: #128eb8;
+  background-color: tomato;
   z-index: 10;
 }
 body header h1 {
@@ -81,16 +81,63 @@ input[type=text]:not(:placeholder-shown) {
 .usuario_guardado {
   padding: 30px;
 }
-.usuario_guardado p {
+.usuario_guardado .usuario_guardado_p {
   font-size: 2em;
   border-bottom: 2px solid #1090c3;
   margin-bottom: 30px;
 }
-.usuario_guardado img {
-  width: 50px;
-  position: absolute;
-  top: 10px;
-  right: 50px;
+.usuario_guardado a {
+  position: fixed;
+  top: 4px;
+  right: 60px;
+  z-index: 10;
+  display: inline-block;
+  width: 60px;
+  background: #fff;
+  border: 3px outset #000;
+  border-radius: 50%;
+}
+.usuario_guardado a img {
+  width: 100%;
+}
+.usuario_guardado a:hover {
+  background-color: #e4e0e0;
+}
+.usuario_guardado a:active {
+  border: 3px inset #000;
+}
+.usuario_guardado .carrito {
+  display: none;
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  top: 70px;
+  right: 0;
+  z-index: 10;
+  background-color: #dcc6a1;
+}
+.usuario_guardado .carrito .encabezado {
+  font-size: 2em;
+  text-align: center;
+}
+.usuario_guardado .carrito .carritoProductos {
+  padding: 10px;
+}
+.usuario_guardado .carrito .carritoProductos div {
+  background-color: #f0ddbc;
+  border-bottom: solid;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.usuario_guardado .carrito #totalCarrito {
+  font-size: 2em;
+  text-align: center;
+}
+.usuario_guardado a:hover + .carrito {
+  display: block;
+}
+.usuario_guardado .carrito:hover {
+  display: block;
 }
 .usuario_guardado button {
   position: absolute;

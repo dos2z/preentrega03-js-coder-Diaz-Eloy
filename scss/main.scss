@@ -27,17 +27,64 @@
 .usuario_guardado {
     padding: 30px;
 
-    p {
+    .usuario_guardado_p {
         font-size: 2em;
         border-bottom: 2px solid $color-interaccion1;
         margin-bottom: 30px;
     }
 
-    img {
-        width: 50px;
-        position: absolute;
-        top: 10px;
-        right: 50px;
+    a {
+        position: fixed;
+        top: 4px;
+        right: 60px;
+        z-index: 10;
+        display: inline-block;
+        width: 60px;
+        background: #fff;
+        border: 3px outset #000;
+        border-radius: 50%;
+        img{
+            width: 100%;
+        }
+    }
+    a:hover{
+        background-color: #e4e0e0;
+    }
+    a:active{
+        border: 3px inset #000;
+    }
+    .carrito {
+        display: none;
+        width: 300px;
+        height: 100vh;
+        position: fixed;
+        top: 70px;
+        right: 0;
+        z-index: 10;
+        background-color: #dcc6a1;
+        .encabezado{
+            font-size: 2em;
+            text-align: center;
+        }
+        .carritoProductos{
+            padding: 10px;
+            div{
+                background-color: #f0ddbc;
+                border-bottom: solid;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+        }
+        #totalCarrito{
+            font-size: 2em;
+            text-align: center;
+        }
+    }
+    a:hover + .carrito{
+        display: block;
+    }
+    .carrito:hover{
+        display: block;
     }
 
     button {
