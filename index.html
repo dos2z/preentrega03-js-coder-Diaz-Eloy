@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Moo+Lah+Lah&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+    <!--Hoja de estilos-->
     <link rel="stylesheet" href="./css/style.css">
     <!-- <script src="./scripts/script.js" defer></script> -->
     <script src="./scripts/cargaDatos.js" defer></script>
     <script src="./scripts/carrito.js" defer></script>
     <title>Pre entrega 3</title>
+    <link rel="icon" type="image/x-icon" href="./asets/icons/paw-solid.svg">
 </head>
-
 <body>
     <header>
         <h1>La Mascotienda</h1>
@@ -28,9 +33,9 @@
         <div class="displayNone" id="usuarioGuardado"><!-- clase original: "usuario_guardado" -->
             <p class="usuario_guardado_p">Bienvenido <span>Usuario</span>!</p>
             <!--carrito-->
-            <a href="" class="btncarrito"><img src="./asets/icons/pngwing.com.png" alt="carrito de compras"></a>
-            <div class="carrito">
-                <p class="encabezado">Carrito</p>
+            <a href="" class="btncarrito"><img src="./asets/icons/cart-shopping-solid.svg" alt="carrito de compras"></a>
+            <div class="carrito displayNone">
+                <p class="encabezado">Carrito</p><img class="salirCarrito" src="./asets/icons/circle-xmark-regular.svg" alt="salir del carrito">
                 <div class="carritoProductos">
                     <div class="productoCarrito">
                         <p>Nada en el carrito</p>
@@ -38,7 +43,7 @@
                     </div>
                 </div>
                 <div id="totalCarrito">
-                    <p>Total: $ <span>0,00</span></p>
+                    <p>Total: $ <span>0,00</span></p><img class="eliminarCarrito" src="./asets/icons/trash-solid.svg" alt="eliminar carrito">
                 </div>
             </div>
             <!--Botón para borrar los datos-->
@@ -79,7 +84,7 @@
             </div>
         </div>
         <div class="productos" id="productos">
-            <div class="productos_gato" id="productosGato">
+            <div class="productos_mascota" id="productosGato">
                 <h2>Gatos</h2>
                 <h3>Alimentos para gato</h3>
                 <div class="items">
@@ -158,17 +163,84 @@
                 </div>
 
             </div>
-            <div class="productos_perro" id="productosPerro">
-
+            <div class="productos_mascota" id="productosPerro">
+                <h2>Perros</h2>
+                <h3>Alimentos para Perros medianos a grandes</h3>
+                <div class="items">
+                    <div class="perro__alimento1 producto">
+                        <img src="./asets/img/comida_perros/Sieger-Puppy-Medium-Large.png" alt="">
+                        <h3 class="nombreProducto">Sieger Puppy Medium/Large</h3>
+                        <div class="producto__descripcion">
+                            <p>Alimento para perros cachorros, hasta 1 año de tamaño mediano o grande</p>
+                        </div>
+                        <div class="precio">Precio:
+                            $<span>15.580</span>
+                        </div>
+                        <a href="" class="agregar_carrito">Agregar al carrito</a>
+                    </div>
+                    <div class="perro__alimento1 producto">
+                        <img src="./asets/img/comida_perros/adult-medium-and-large.png" alt="">
+                        <h3 class="nombreProducto">Sieger Perros Adultos Medium/Large</h3>
+                        <div class="producto__descripcion">
+                            <p>Alimento para perros adultos, a partir de los 12 meses de tamaño mediano o grande</p>
+                        </div>
+                        <div class="precio">Precio:
+                            $<span>14.210</span>
+                        </div>
+                        <a href="" class="agregar_carrito">Agregar al carrito</a>
+                    </div>
+                    <div class="perro__alimento1 producto">
+                        <img src="./asets/img/comida_perros/Sieger-Senior-Medium-Large.png" alt="">
+                        <h3 class="nombreProducto">Sieger Perros Senior Medium/Large</h3>
+                        <div class="producto__descripcion">
+                            <p>Alimento para perros mayores a 7 años de tamaño mediano o grande</p>
+                        </div>
+                        <div class="precio">Precio:
+                            $<span>16.430</span>
+                        </div>
+                        <a href="" class="agregar_carrito">Agregar al carrito</a>
+                    </div>
+                </div>
+                <h3>Alimentos para Perros pequeños</h3>
+                <div class="items">
+                    <div class="gato__alimento1 producto">
+                        <img src="./asets/img/comida_perros/Sieger-Puppy-Mini-Small.png" alt="">
+                        <h3 class="nombreProducto">Sieger Puppy Mini/Small</h3>
+                        <div class="producto__descripcion">
+                            <p>Alimento para Perros hasta 1 año, de tamaño pequeño</p>
+                        </div>
+                        <div class="precio">Precio:
+                            $<span>16.380</span>
+                        </div>
+                        <a href="" class="agregar_carrito">Agregar al carrito</a>
+                    </div>
+                    <div class="gato__alimento1 producto">
+                        <img src="./asets/img/comida_perros/Sieger-Adult-Mini-Small.png" alt="">
+                        <h3 class="nombreProducto">Sieger Perro Adulto Mini/Small</h3>
+                        <div class="producto__descripcion">
+                            <p>Alimento para perros mayores a 12 meses de tamaño pequeño</p>
+                        </div>
+                        <div class="precio">Precio:
+                            $<span>14.310</span>
+                        </div>
+                        <a href="" class="agregar_carrito">Agregar al carrito</a>
+                    </div>
+                    <div class="gato__alimento1 producto">
+                        <img src="./asets/img/comida_perros/Sieger-Senior-Mini-Small.png" alt="">
+                        <h3 class="nombreProducto">Sieger perros Senior Mini/Small</h3>
+                        <div class="producto__descripcion">
+                            <p>Alimento para perros mayores a 7 años de tamaño pequeño</p>
+                        </div>
+                        <div class="precio">Precio:
+                            $<span>20.570</span>
+                        </div>
+                        <a href="" class="agregar_carrito">Agregar al carrito</a>
+                    </div>
+                </div>
             </div>
         </div>
-
     </main>
     <footer>
-
     </footer>
-
-
 </body>
-
 </html>

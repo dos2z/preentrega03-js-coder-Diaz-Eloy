@@ -1,18 +1,22 @@
 body {
     width: 100%;
     height: 100vh;
-    background-color: $color-fondo;
+    background: url(../asets/img/fondo.png);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
     header {
         position: sticky;
         top: 0;
         height: 70px;
         padding: 20px;
-        background-color: tomato;
+        background-color: #ff6347;
         z-index: 10;
 
         h1 {
+            text-shadow: 5px 5px 10px#fff;
+            font-size: 2.5rem;
             text-align: center;
+            font-family: 'Moo Lah Lah', sans-serif;
         }
     }
 }

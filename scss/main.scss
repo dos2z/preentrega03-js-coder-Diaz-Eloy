@@ -26,9 +26,10 @@
 
 .usuario_guardado {
     padding: 30px;
-
+    background-color: #f7d1b7;
     .usuario_guardado_p {
         font-size: 2em;
+        font-family: 'Tilt Neon', sans-serif;
         border-bottom: 2px solid $color-interaccion1;
         margin-bottom: 30px;
     }
@@ -42,49 +43,80 @@
         width: 60px;
         background: #fff;
         border: 3px outset #000;
-        border-radius: 50%;
+        border-radius: 50%; 
+        box-shadow: 5px 5px 10px tomato;
         img{
             width: 100%;
         }
     }
     a:hover{
-        background-color: #e4e0e0;
+        background-color: #dbfb6a;
     }
     a:active{
         border: 3px inset #000;
     }
     .carrito {
-        display: none;
         width: 300px;
         height: 100vh;
         position: fixed;
         top: 70px;
         right: 0;
         z-index: 10;
-        background-color: #dcc6a1;
+        background-color: #fbfbfb;
+        font-family: sans-serif;
         .encabezado{
             font-size: 2em;
             text-align: center;
         }
+        .salirCarrito {
+            position: absolute;
+            right: 20px;
+            top: 5px;
+            width: 30px;
+        }
+        .salirCarrito:active{
+            width: 28px;
+        }
+        .salirCarrito:hover{
+            background-color: #e8aca2;
+            border-radius: 50%;
+        }
         .carritoProductos{
             padding: 10px;
+            max-height: 60vh;
+            overflow-y: auto;
             div{
-                background-color: #f0ddbc;
+                background-color: #f9f9f9;
                 border-bottom: solid;
                 padding: 10px;
                 margin-bottom: 10px;
+                :first-child{
+                    font-weight: bold;
+                    background-color: #ffffff;
+                }
             }
         }
         #totalCarrito{
+            margin-top: 20px;
             font-size: 2em;
+            background-color: #ffffff;
+            text-decoration:underline;
+            border-radius: 5px;
             text-align: center;
+            .eliminarCarrito{
+                position: absolute;
+                right: 20px;
+                width: 20px;
+            }
+            .eliminarCarrito:active{
+                width: 15px;
+            }
+            .eliminarCarrito:hover{
+                background-color: #ff5858;
+                border-radius: 50%;
+                overflow: visible;
+            }
         }
-    }
-    a:hover + .carrito{
-        display: block;
-    }
-    .carrito:hover{
-        display: block;
     }
 
     button {
@@ -94,11 +126,12 @@
 }
 
 .mascota {
-    background: #fff;
+    background: #ffffffcf;
     width: 20%;
     min-width: 250px;
     margin: 20px;
     padding: 20px;
+    border: .5px solid #000;
     border-radius: 20px;
 
     p {
@@ -115,26 +148,31 @@
 }
 
 .mascota_guardada {
-    margin-left: 20px;
+    margin: 20px;
     width: 20%;
     min-width: 375px;
     display: flex;
     gap: 20px;
     align-items: center;
-    background-color: #f7b7b7;
+    background: #ffffffb0;
     background-size: contain;
     background-repeat: no-repeat;
+    border: 1px solid #000;
     border-radius: 10px;
 
     /*  div{
         width: 30%;
     } */
     ul {
-
+        list-style: none;
         padding-left: 30px;
 
         li {
             margin: 10px;
+            padding: 5px;
+            border: 2px solid #000;
+            border-radius: 5px;
+            background-color: #fff;
         }
     }
 
@@ -147,7 +185,8 @@
 
 .productos {
     display: flex;
-    justify-content: end;
+    flex-direction: column;
+    align-items: flex-end;
     margin-top: 40px;
     padding: 40px;
     background: url(../asets/img/gato_mirando_arriba.png), linear-gradient(#f7dcc9, #f1bb98);
@@ -157,7 +196,7 @@
     background-attachment: fixed;
 }
 
-.productos_gato {
+.productos_mascota {
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -223,6 +262,9 @@
     a:hover {
         background-color: #dcc6a1;
         outline: 1px solid $color-interaccion1;
+    }
+    a:active {
+        outline: 2px inset $color-interaccion1;
     }
 }
 

@@ -70,11 +70,10 @@ function cargarMascota(evt) {
         const nuevaMascota = leerMascota(pet);
         localStorage.setItem("mascota", JSON.stringify(nuevaMascota));
         mascota.setAttribute("class", "displayNone") 
-        muestraTuMascota();  
-        //location.reload();     
-    }
-    //return nuevaMascota;
+        muestraTuMascota();      
+    } 
 }
+
 //funcion muestra la tarjeta de carga de datos de mascota
 function verVentanaMascota(){
     mascota.classList.remove("displayNone");
@@ -106,27 +105,11 @@ if (usuarioGuardado) {
 
 //-----CARGA DATOS MASCOTA--------------
 
-/* let mascotaStorage = JSON.parse(localStorage.getItem("mascota"));
-
-if (mascotaStorage) {
-    mascota.setAttribute("class", "displayNone");
-    mascotaGuardada.setAttribute("class", "mascota_guardada");
-    tuMascota(mascotaStorage);  
-}  */
 function muestraTuMascota(){
     let mascotaStorage = JSON.parse(localStorage.getItem("mascota"));
     mascotaGuardada.setAttribute("class", "mascota_guardada");
     tuMascota(mascotaStorage);
 } 
-
-
-
-
-
-
-
-
-
 
 
 
